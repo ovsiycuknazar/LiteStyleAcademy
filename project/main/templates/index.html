@@ -1,0 +1,85 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static 'main/css/style.css' %}">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.2/css/all.css">
+    <title>LiteStyleAcademy</title>
+    
+</head>
+<body>
+    <div class="logo_field">
+        <center>
+            <a href=""><ion-icon name="logo-instagram"></ion-icon></a>
+            <a href=""><ion-icon name="logo-tiktok"></ion-icon></a>
+            <img src="{% static 'main/img/litestyleAc.png' %}" class="logo">
+            <a href=""><ion-icon name="logo-youtube"></ion-icon></a>
+            <a href=""><ion-icon name="logo-facebook"></ion-icon></a>
+        </center>
+    </div>
+    <h1>Hello</h1>
+    <h1 class="animate__animated animate__bounce">An animated element</h1>
+    	<!-- Контент -->
+			<div class="content">
+				<div class="tabs">
+					<nav class="tabs__items">
+						<a href="#tab_01" class="tabs__item"><span>Training</span></a>
+						<a href="#tab_02" class="tabs__item"><span>News</span></a>
+						<a href="#tab_03" class="tabs__item"><span>About</span></a>
+					</nav>
+					<div class="tabs__body">
+						<div id="tab_01" class="tabs__block">
+							{% for x in video %}
+                                <h3 class="text-center mt-2 mb-2">{{x.caption}}</h3>
+                                    <video class="embed-responsive embed-responsive-16by9" controls="controls" >
+                                        <source src="{{x.video.url}}" type="video/mp4" />
+                                    </video>
+                            {% endfor %}
+                        </div>
+						<div id="tab_02" class="tabs__block">
+							Вторая вкладка. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim laudantium esse modi aut in recusandae explicabo, doloremque animi sapiente hic nobis ducimus minima distinctio deleniti tempora deserunt cumque amet consequatur. Lorem ipsum, dolor sit amet consectetur adipisicing elit. Enim laudantium esse modi aut in recusandae explicabo, doloremque animi sapiente hic nobis ducimus minima distinctio deleniti tempora deserunt cumque amet consequatur.
+						</div>
+						<div id="tab_03" class="tabs__block">
+							The best academy of football skills in Ukraine "Lite Style Academy". We are located in the city of Odessa.
+                            Training at the academy takes place in small groups and individually in such areas as football technique,
+                             football freestyle and street panna.
+                             <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+                            <section>
+                                <div class="contact">
+                                    <h2>Contact us</h2>
+                                    <ul>
+                                    <li>
+                                        <i class="fa fa-envelope"></i>
+                                        <a href="#">makidonov10@gmail.com</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-phone"></i>
+                                        <a href="#">+380-63-707-0193</a>
+                                    </li>
+                                    <li>
+                                        <i class="fa fa-building-o"></i>
+                                        <p>Lite Style Academy, Inc <br>Ukraine, Odessa city
+                                        </p>
+                                    </li>
+                                    </ul>
+                                </div>
+
+                            </section>
+
+						</div>
+					</div>
+				</div>
+				<div class="text">
+
+				</div>
+			</div>
+		</div>
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
